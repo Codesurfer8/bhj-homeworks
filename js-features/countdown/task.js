@@ -1,6 +1,8 @@
 // task
 
 const timerCount = document.getElementById("timer");
+
+
 const countDown = () => {
     if(timerCount.textContent == 0) {
         alert("Вы победили в конкурсе!");

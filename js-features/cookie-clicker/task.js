@@ -3,6 +3,8 @@
 const countValue = document.getElementById("clicker__counter");
 const cookie = document.getElementById("cookie");
 
+
+
 let i = 0;
 let doClick = function () {
     countValue.textContent++
@@ -16,8 +18,13 @@ let doClick = function () {
         cookie.height = 128
         i = 0;
     }
+
 }
 
 cookie.onclick = doClick;
 
 // повышенный уровень ...
+
+
+
+
