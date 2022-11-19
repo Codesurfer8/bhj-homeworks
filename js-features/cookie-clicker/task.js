@@ -19,6 +19,7 @@ let doClick = function () {
         i = 0;
     }
 
+    
 }
 
 cookie.onclick = doClick;
