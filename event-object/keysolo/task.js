@@ -25,9 +25,8 @@ class Game {
     let idInter = setInterval(
       () => {
         if (timer.textContent === '0') {
-          
-          
-          clearInterval(idInter);
+          this.reset();
+          clearInterval(this.idInter);
         } else {
           timer.textContent -= 1;
         }
@@ -72,7 +71,7 @@ class Game {
   }
 
   setNewWord() {
-    
+    this.startTimer();
     const word = this.getWord();
     const timer = this.container.querySelector(".timer");
     timer.textContent = word.length;
@@ -83,7 +82,6 @@ class Game {
   }
 
   getWord() {
-
     const words = [
       'bob',
       'awesome',

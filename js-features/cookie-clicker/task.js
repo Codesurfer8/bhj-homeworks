@@ -1,12 +1,22 @@
-//task
+//base level
 
 const countValue = document.getElementById("clicker__counter");
 const cookie = document.getElementById("cookie");
-
+const averageClick = document.getElementById("average")
 
 
 let i = 0;
+
+let timeStart = new Date().getTime();
+
+
 let doClick = function () {
+    const timeEnd = new Date().getTime();
+    let diff = (timeEnd - timeStart) / 1000;
+    if(diff < 1) {
+        averageClick.textContent = ((1 / diff).toFixed(0));
+    }
+
     countValue.textContent++
 
     if (i === 0) {
@@ -18,13 +28,15 @@ let doClick = function () {
         cookie.height = 128
         i = 0;
     }
-
-    
-}
+     
+    timeStart = new Date().getTime();
+};
 
 cookie.onclick = doClick;
 
-// повышенный уровень ...
+// high level
+
+
 
 
 
