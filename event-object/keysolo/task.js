@@ -20,13 +20,13 @@ class Game {
 
   startTimer() {
     clearInterval(this.idInter);
-
+    
     const timer = this.container.querySelector(".timer");
-    let idInter = setInterval(
+    this.idInter = setInterval(
       () => {
         if (timer.textContent === '0') {
-          this.reset();
           clearInterval(this.idInter);
+          this.reset();
         } else {
           timer.textContent -= 1;
         }
